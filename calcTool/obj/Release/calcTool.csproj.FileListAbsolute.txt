@@ -1,0 +1,14 @@
+C:\workspace\winapp\calcTool\calcTool\bin\Release\calcTool.exe.config
+C:\workspace\winapp\calcTool\calcTool\bin\Release\calcTool.exe
+C:\workspace\winapp\calcTool\calcTool\bin\Release\calcTool.pdb
+C:\workspace\winapp\calcTool\calcTool\obj\Release\MainWindow.g.cs
+C:\workspace\winapp\calcTool\calcTool\obj\Release\App.g.cs
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool_MarkupCompile.cache
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool_MarkupCompile.lref
+C:\workspace\winapp\calcTool\calcTool\obj\Release\MainWindow.baml
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool.g.resources
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool.Properties.Resources.resources
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool.csproj.GenerateResource.Cache
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool.csproj.CoreCompileInputs.cache
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool.exe
+C:\workspace\winapp\calcTool\calcTool\obj\Release\calcTool.pdb

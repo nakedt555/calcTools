@@ -1,0 +1,87 @@
+﻿<Window x:Name="calcToos" x:Class="calcTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calcTool"
+        mc:Ignorable="d"
+        Title="caclTools" Height="191.304" Width="398.951"
+        ResizeMode="NoResize">
+    <Grid Height="172" VerticalAlignment="Top" Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="273*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="177" VerticalAlignment="Top" Width="393" Grid.ColumnSpan="2" Margin="0,0,-2,-5" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="進数変換" Margin="0,0,0,-2" Width="100">
+                <Grid Background="#FFE5E5E5" Height="160" VerticalAlignment="Top" Margin="0,-24,-3,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="Auto" MinWidth="18"/>
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="62*"/>
+                        <ColumnDefinition Width="273*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="input_binery" HorizontalAlignment="Left" Height="26" Margin="10,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" PreviewTextInput="input_binery_PreviewTextInput" Grid.Column="3" Grid.ColumnSpan="3" TextAlignment="Right" TextChanged="input_binery_TextChanged"/>
+                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="1,35,0,0" TextWrapping="Wrap" Text="2進数" VerticalAlignment="Top" Width="53" FontSize="14" TextAlignment="Center" Grid.ColumnSpan="4" RenderTransformOrigin="1.482,2.068"/>
+                    <Button x:Name="clear_btn" Content="クリア" Grid.Column="5" HorizontalAlignment="Left" Margin="196,33,0,0" VerticalAlignment="Top" Width="58" Height="26" RenderTransformOrigin="0.58,-0.636" Click="clear_btn_Click"/>
+                    <TextBox x:Name="input_decimal" HorizontalAlignment="Left" Height="26" Margin="10,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" PreviewTextInput="input_decimal_PreviewTextInput" Grid.Column="3" Grid.ColumnSpan="3" TextAlignment="Right" TextChanged="input_decimal_TextChanged"/>
+                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="1,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" FontSize="14" TextAlignment="Center" Grid.ColumnSpan="4" RenderTransformOrigin="1.482,2.068"><Run Text="10"/><Run Text="進数"/></TextBlock>
+                    <TextBox x:Name="input_hex" HorizontalAlignment="Left" Height="26" Margin="10,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" PreviewTextInput="input_hex_PreviewTextInput" Grid.Column="3" Grid.ColumnSpan="3" TextAlignment="Right" TextChanged="input_hex_TextChanged"/>
+                    <TextBlock HorizontalAlignment="Left" Height="24" Margin="1,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" FontSize="14" TextAlignment="Center" Grid.ColumnSpan="4" RenderTransformOrigin="1.482,2.068"><Run Text="16"/><Run Text="進数"/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="周期・周波数変換" HorizontalAlignment="Left" Width="100" Margin="0,0,0,-2" >
+                <Grid Background="#FFE5E5E5" Margin ="-21,-77,-310,-5">
+                    <TextBox x:Name="input_freq" HorizontalAlignment="Left" Height="23" Margin="77,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" PreviewTextInput="input_freq_PreviewTextInput"/>
+                    <TextBox x:Name="input_period" HorizontalAlignment="Left" Height="23" Margin="77,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" PreviewTextInput="input_period_PreviewTextInput"/>
+                    <Button x:Name="f2p" Content="↓変換" HorizontalAlignment="Left" Margin="165,132,0,0" VerticalAlignment="Top" Width="75" Click="f2p_Click" RenderTransformOrigin="1.051,0.679"/>
+                    <ComboBox x:Name="p_unit_menu" HorizontalAlignment="Left" Margin="334,166,0,0" VerticalAlignment="Top" Width="60" SelectionChanged="p_unit_menu_SelectionChanged"/>
+                    <Button x:Name="p2f" Content="↑変換" HorizontalAlignment="Left" Margin="77,132,0,0" VerticalAlignment="Top" Width="75" Click="p2f_Click" />
+                    <ComboBox x:Name="f_unit_menu" HorizontalAlignment="Left" Margin="334,95,0,0" VerticalAlignment="Top" Width="60" SelectionChanged="f_unit_menu_SelectionChanged"/>
+                    <TextBlock HorizontalAlignment="Left" Height="22" Margin="28,95,0,0" TextWrapping="Wrap" Text="周波数" VerticalAlignment="Top" Width="44" FontSize="14" TextAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Left" Height="23" Margin="28,166,0,0" TextWrapping="Wrap" Text="周期" VerticalAlignment="Top" Width="44" TextAlignment="Center" TextDecorations="{x:Null}" FontSize="16"/>
+                    <Button x:Name="clear" Content="クリア" HorizontalAlignment="Left" Margin="254,132,0,0" VerticalAlignment="Top" Width="75" Click="clear_Click" RenderTransformOrigin="1.051,0.679"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="タイマ設定値計算" HorizontalAlignment="Left" Width="107" Margin="0,0,-7,-2" >
+                <Grid Background="#FFE5E5E5" Margin ="-21,-77,-31,-5">
+                    <GroupBox Header="Select STM" HorizontalAlignment="Left" Height="75" Margin="26,75,0,0" VerticalAlignment="Top" Width="109" FontSize="14"/>
+                    <Grid HorizontalAlignment="Left" Height="59" Margin="26,91,0,0" VerticalAlignment="Top" Width="109">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="93*"/>
+                            <ColumnDefinition Width="16*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="f1_radio_btn" Content="STM32F1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14" Checked="f1_radio_btn_Checked"  />
+                        <RadioButton x:Name="f4_radio_btn" Content="STM32F4" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" FontSize="14" Checked="f4_radio_btn_Checked" />
+                    </Grid>
+                    <GroupBox Header="Config" HorizontalAlignment="Left" Height="75" Margin="140,75,0,0" VerticalAlignment="Top" Width="180" FontSize="14">
+                        <Grid HorizontalAlignment="Left" Height="62" Margin="0,-10,-2,-6" VerticalAlignment="Top" Width="170">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="167*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox x:Name="use_tim_name" Margin="82,10,7,0" VerticalAlignment="Top" Height="22" FontSize="12"/>
+                            <Label Content="Use TIM" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" FontSize="14" Height="29" Width="60"/>
+                            <Label Content="IT Freq(Hz)" HorizontalAlignment="Left" Margin="0,29,0,0" VerticalAlignment="Top" FontSize="14" Width="160" Height="29"/>
+                            <TextBox x:Name="it_freq" HorizontalAlignment="Left" Height="20.8" Margin="82,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" PreviewTextInput="input_freq_PreviewTextInput" RenderTransformOrigin="0.491,1.203" FontSize="12"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Result" HorizontalAlignment="Left" Height="51" Margin="26,150,0,0" VerticalAlignment="Top" Width="367" FontSize="14">
+                        <Grid HorizontalAlignment="Left" Height="34" Margin="0,-9,-15,0" VerticalAlignment="Top" Width="368">
+                            <ComboBox x:Name="period_box" Margin="59,7,209,0" VerticalAlignment="Top" SelectionChanged="period_box_SelectionChanged"/>
+                            <Label Content="⇔" HorizontalAlignment="Left" Margin="164,3,0,-1" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="1.769,0.5" Height="31"/>
+                            <ComboBox x:Name="pres_box" Margin="195,6,73,0" VerticalAlignment="Top" SelectionChanged="pres_box_SelectionChanged"/>
+                            <Label Content="Period" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontSize="12" RenderTransformOrigin="1.769,0.5"/>
+                            <Label Content="Prescaler" HorizontalAlignment="Left" Margin="300,6,0,0" VerticalAlignment="Top" FontSize="12" RenderTransformOrigin="1.769,0.5"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="calc_btn" Content="計算" HorizontalAlignment="Left" Margin="325,122,0,0" VerticalAlignment="Top" Width="68" FontSize="14" Click="calc_btn_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

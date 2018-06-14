@@ -1,0 +1,15 @@
+C:\workspace\winapp\calcTool\calcTool\bin\Debug\calcTool.exe.config
+C:\workspace\winapp\calcTool\calcTool\bin\Debug\calcTool.exe
+C:\workspace\winapp\calcTool\calcTool\bin\Debug\calcTool.pdb
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\MainWindow.g.cs
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\App.g.cs
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool_MarkupCompile.cache
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool_MarkupCompile.lref
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\MainWindow.baml
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.g.resources
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.Properties.Resources.resources
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.csproj.GenerateResource.Cache
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.csproj.CoreCompileInputs.cache
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.exe
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.pdb
+C:\workspace\winapp\calcTool\calcTool\obj\Debug\calcTool.csprojResolveAssemblyReference.cache
